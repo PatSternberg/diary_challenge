@@ -1,15 +1,15 @@
 from lib.diary import *
 
 def test_make_snippet():
-    diary = Diary()
-    result = diary.make_snippet('String should stop about here but it doesn\'t')
+    new_diary = Diary()
+    result = new_diary.make_snippet('String should stop about here but it doesn\'t')
     assert result == 'String should stop about here...'
 
 def test_count_words():
-    diary = Diary()
-    result = diary.count_words('Octopus Cat Dog Lizard Chimp')
+    new_diary = Diary()
+    result = new_diary.count_words('Octopus Cat Dog Lizard Chimp')
     assert result == 5
-    result = diary.count_words('')
+    result = new_diary.count_words('')
     assert result == 0
 
 # As a user
@@ -17,8 +17,8 @@ def test_count_words():
 # I want to see an estimate of reading time for a text,
 # assuming that I can read 200 words a minute.
 def test_estimate_reading_time():
-    diary = Diary()
-    result = diary.estimate_reading_time('A string to be tested', 200)
+    new_diary = Diary()
+    result = new_diary.estimate_reading_time('A string to be tested', 200)
     assert result == 'Time (in seconds): 0.025'
 
 # As a user
