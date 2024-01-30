@@ -1,4 +1,4 @@
-from lib.diary import *
+from lib.diary_builder import *
 
 def test_make_snippet():
     new_diary = Diary()
